@@ -1,0 +1,21 @@
+.home {
+  padding: 2rem;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    background: #0070f3;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background: #0059c9;
+    }
+  }
+}
