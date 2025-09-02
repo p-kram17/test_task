@@ -53,6 +53,12 @@ const authSlice = createSlice({
       }
     },
     logout: (state) => {
+      if (state.currentUser) {
+        state.registeredUsers = state.registeredUsers.filter(
+          (u) => u.email !== state.currentUser?.email
+        );
+        localStorage.setItem("users", JSON.stringify(state.registeredUsers));
+      }
       state.currentUser = null;
       localStorage.removeItem("currentUser");
     },
